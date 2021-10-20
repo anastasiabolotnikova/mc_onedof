@@ -1,0 +1,9 @@
+{
+  "name": "mc-rtc-onedof-robot-module",
+  "version-string": "1.0.0",
+  "homepage": "",
+  "description": "OneDoFRobotModule for mc_rtc",
+  "dependencies": [
+    "mc-rtc"
+  ]
+}

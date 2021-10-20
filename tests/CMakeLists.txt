@@ -1,0 +1,7 @@
+if(TARGET OneDoFRobotModule)
+  set(ROBOT_MODULE_PARAMS "\"OneDoFRobotModule\"")
+  configure_file("${CMAKE_CURRENT_SOURCE_DIR}/loader.in.cpp" "${CMAKE_CURRENT_BINARY_DIR}/OneDoFRobotModule/loader.cpp")
+  add_executable(loader_OneDoFRobotModule "${CMAKE_CURRENT_BINARY_DIR}/OneDoFRobotModule/loader.cpp")
+  target_link_libraries(loader_OneDoFRobotModule PUBLIC mc_rtc::mc_rbdyn)
+  add_test(NAME loader_OneDoFRobotModule COMMAND loader_OneDoFRobotModule "$<TARGET_FILE_DIR:OneDoFRobotModule>")
+endif()
